@@ -1,0 +1,30 @@
+
+.toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  /*font-weight: 600;*/
+}
+
+.brand {
+  color: #4D7992;
+  font-size: 27px;
+  font-weight: 550;
+  margin-right: 40px;
+  padding-bottom: 0.5em;
+}
+.brand .brand1 {
+  color: #434343;
+  font-size: 24px;
+  line-height: 1.3em;
+  padding-top: 0.35em;
+}
+.brand .brand2 {
+  line-height: 0.7em;
+}
+

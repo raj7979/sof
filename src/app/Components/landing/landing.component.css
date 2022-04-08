@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  margin: 32px auto 32px;
+  padding: 0 16px;
+  /*max-width: 960px;*/
+  flex-direction: column;
+}
+
+.graphs {
+  display: flex;
+  margin: 20px 70px 32px;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}

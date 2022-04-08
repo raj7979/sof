@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+    <title>Dialog elements</title>
+  </head>
+  <body class="mat-app-background">
+    <div  style="margin: 20px;">
+      <p></p>
+      <h1>Token</h1>
+      <div class="authDetail">
+        <p style='display:inline;color:LightCoral'>{{tokenHeader}}</p>
+        <p style='display:inline;color:black;font-weight: bold;'>.</p>
+        <p style='display:inline;color:fuchsia'>{{tokenPayload}}</p>
+        <p style='display:inline;color:black;font-weight: bold;'>.</p>
+        <p style='display:inline;color:Blue'>{{tokenSignature}}</p>
+      </div>
+      <p>This token can be decoded at <a href="https://jwt.io">https://jwt.io</a>
+
+      <p></p>
+      <h1>JWT Token</h1>
+      <p>The component parts of the JWT access token is as follows:</p>
+      <div><p style='display:inline;color:Black'><b>JWT Header:    </b></p><p style='display:inline;color:LightCoral'>{{tokenHeader}}</p></div>
+      <div><p style='display:inline;color:Black'><b>JWT Payload:   </b></p><p style='display:inline;color:fuchsia'>{{tokenPayload}}</p></div>
+      <div><p style='display:inline;color:Black'><b>JWT Signature: </b></p><p style='display:inline;color:Blue'>{{tokenSignature}}</p></div>
+
+      <p></p>
+      <h1>Token Payload</h1>
+      {{tokenJsonPayload}}
+
+      <p></p>
+      <p><b>Subject: </b>{{this.jwt?.sub}}</p>
+      <p><b>Issuer: </b>{{this.jwt?.iss}}</p>
+      <p><b>Base FHIR: </b>{{baseFhir}}</p>
+      <p><b>Scope: </b>{{this.jwt?.scp}}</p>
+      <p><b>Context: </b>{{context}}</p>
+
+      <table>
+        <!--
+           First show the expected launch parameters
+        -->
+        <tr><th> === </th></tr>
+        <tr><th> 1) Expected (can be extended) </th></tr>
+        <tr>
+          <th>Please see <a href="http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/#launch-context-arrives-with-your-access_token">expected launch context parameters</a></th>
+        </tr>
+
+        <tr>
+          <table>
+            <tr>
+              <th><b>Context Attribute</b></th>  <th><b>Value</b></th>
+            </tr>
+
+            <tr>
+              <td>patient</td>  <td>{{this.jwt?.context?.patient}}</td>
+            </tr>
+
+            <tr>
+              <td>encounter</td>  <td>{{this.jwt?.context?.encounter}}</td>
+            </tr>
+
+            <tr>
+              <td>practitioner</td>  <td>{{this.jwt?.context?.practitioner}}</td>
+            </tr>
+
+            <tr>
+              <td>need_patient_banner</td>  <td>{{this.jwt?.context?.need_patient_banner}}</td>
+            </tr>
+
+            <tr>
+              <td>intent</td>  <td>{{this.jwt?.context?.intent}}</td>
+            </tr>
+
+            <tr>
+              <td>smart_style_url</td>  <td>{{this.jwt?.context?.smart_style_url}}</td>
+            </tr>
+          </table>
+        </tr>
+
+
+          <!--
+             Now show the optional launch parameters
+          -->
+        <tr><th> === </th></tr>
+        <tr><th> 2) Optional Example Attributes </th></tr>
+        <tr>
+          <th>Please see <a href="http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/#launch-intent">optional launch context parameters</a></th>
+        </tr>
+
+        <tr>
+          <table>
+            <tr>
+              <th><b>Context Attribute</b></th>  <th><b>Value</b></th>
+            </tr>
+            <tr>
+              <td>Intent</td>  <td>{{this.jwt?.context?.intent}}</td>
+            </tr>
+          </table>
+        </tr>
+
+        <!--
+           Now show the optional launch parameters
+        -->
+        <tr><th> --- </th></tr>
+        <tr><th> 3) Experimental Attributes </th></tr>
+        <tr>
+          <th>Please see <a href="http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/#styling">experimental launch context parameters</a></th>
+        </tr>
+
+        <tr>
+          <table>
+            <tr>
+              <th><b>Context Attribute</b></th>  <th><b>Value</b></th>
+            </tr>
+            <tr>
+              <td>color_background</td>  <td>{{this.jwt?.context?.color_background}}</td>
+            </tr>
+
+            <tr>
+              <td>color_error</td>  <td>{{this.jwt?.context?.color_error}}</td>
+            </tr>
+
+            <tr>
+              <td>color_highlight</td>  <td>{{this.jwt?.context?.color_highlight}}</td>
+            </tr>
+
+            <tr>
+              <td>color_modal_backdrop</td>  <td>{{this.jwt?.context?.color_modal_backdrop}}</td>
+            </tr>
+
+            <tr>
+              <td>color_success</td>  <td>{{this.jwt?.context?.color_success}}</td>
+            </tr>
+
+            <tr>
+              <td>color_text</td>  <td>{{this.jwt?.context?.color_text}}</td>
+            </tr>
+
+            <tr>
+              <td>dim_border_radius</td>  <td>{{this.jwt?.context?.dim_border_radius}}</td>
+            </tr>
+
+            <tr>
+              <td>dim_font_size</td>  <td>{{this.jwt?.context?.dim_font_size}}</td>
+            </tr>
+
+            <tr>
+              <td>dim_spacing_size</td>  <td>{{this.jwt?.context?.dim_spacing_size}}</td>
+            </tr>
+
+            <tr>
+              <td>font_family_body</td>  <td>{{this.jwt?.context?.font_family_body}}</td>
+            </tr>
+
+            <tr>
+              <td>font_family_heading</td>  <td>{{this.jwt?.context?.font_family_heading}}</td>
+            </tr>
+          </table>
+        </tr>
+      </table>
+
+      <p>More information on SMART on FHIR launch can be found at <a href="http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/">Scopes and Launch Context</a></p>
+    </div>
+  </body>
+</html>
