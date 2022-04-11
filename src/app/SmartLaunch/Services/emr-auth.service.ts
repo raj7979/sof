@@ -14,7 +14,7 @@ export class EmrAuthService {
   public oktaAuth = new OktaAuth({
     clientId: '0oa2jnny1mJQc3gwR1d7',
     issuer: 'https://wellhealth.oktapreview.com/oauth2/aus1trldvwYSoOtK01d7',
-    redirectUri: 'oktacallback',
+    redirectUri: 'sof/oktacallback',
     //tokenUrl: "http://silverfir:8080/kaiemr/smart/proxy/v1/token",
     scopes: ['patient/Patient.read', 'patient/Observation.read', 'launch', 'openid', 'email', 'profile'],
     pkce: true
@@ -37,7 +37,7 @@ export class EmrAuthService {
     this.oktaAuth = new OktaAuth({
       clientId: '0oa2jnny1mJQc3gwR1d7',
       issuer: 'https://wellhealth.oktapreview.com/oauth2/aus1trldvwYSoOtK01d7',
-      redirectUri: 'oktacallback',
+      redirectUri: 'sof/oktacallback',
       //tokenUrl: "http://silverfir:8080/kaiemr/smart/proxy/v1/token",
       scopes: ['patient/Patient.read', 'patient/Observation.read', 'launch', 'openid', 'email', 'profile'],
       pkce: true
